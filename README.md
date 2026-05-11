@@ -1,4 +1,3 @@
-````markdown
 # BHEH ning XSSRocket
 
 <p align="center">
@@ -6,76 +5,76 @@
 </p>
 
 <p align="center">
-XSS Rocket, Black Hat Ethical Hacking tomonidan yozilgan bo'lib, hujumga qarshi xavfsizlik va XSS (Sayt-ichasidagi skriptlar) hujumlari uchun mo'ljallangan.
+XSS Rocket - Black Hat Ethical Hacking tomonidan yaratilgan bo'lib, Hujumga qarshi xavfsizlik va XSS (Cross-Site Scripting) hujumlar uchun mo'ljallangan.
 
-Rahmat va hurmat <a href="https://github.com/shadowdevnotreal"> ShadowDevnotreal ga
+Rahmat <a href="https://github.com/shadowdevnotreal">ShadowDevnotreal</a> ga
 
 </p>
 
 # Tavsifi
 
-XSS Rocket, **Wayback Machine** dan URL larni olib kelib, ularni URL da mavjud bo'lgan parametrlar asosida filtrlaydi. Keyin **httpx** bilan URL larni filtrlaydi, bir nechta **Grep** va **SED**dan foydalanib [...]
+XSS Rocket **Wayback Machine** dan URL larni oladi va ularni URL da mavjud bo'lgan parametrlar asosida filtr qiladi. Keyin **httpx** dan foydalanib, **Grep** va **SED** qo'llab-quvvatlash bilan URL larni filtrlaydi.
 
-Bundan tashqari, u **xususiyatni** o'z ichiga oladi, bu **Hujumga qarshi xavfsizlik uchun tasodifiy Sun Tzu iqtibosni** yaratadi va natijalarni ko'rsatish uchun lolcat va ASCII art dan foydalanadi va foydalanuvchini tekshirish tizimini ta'minlaydi [...]
+Bu vosita **Offensive Security uchun tasodifiy Sun Tzu iqtiboslari** yaratish xususiyatini o'z ichiga oladi va lolcat qo'llanib rangli chiqarish va ASCII art ni ko'rsatadi hamda foydalanuvchi tekshiruvi tizimiga ega.
 
-Bu vositani maxsus qiladigan narsа bu **metodologiya** va **tanqidiy fikrlash** hisoblanadi, chunki u har bir qadamda nima qilayotganini, lekin payloadvordni o'zgartirib, [...]
+Bu vosita nima bilan maxsusdir - bu **metodologiya** va har bir harakat uchun ortasida **kritik fikrlash** dir, shuningdek payload sozlamasi orqali o'zgarish kiritish imkoniyatidir.
 
-# So'nggi Versiya & Yangilanishlar:
+# Oxirgi Versiya va Yangilanishlar:
 
-• V2 endi natijalarni har qanday emailga yuborish imkonini beradi, siz konfiguratsiyani o'rnatish uchun o'zingizning SMTP ma'lumotlarini skriptni tahrirlash va ma'lumotlarni qo'shish orqali foydalanishingiz mumkin.
+• V2 endi natijalarni istalgan emailga yuborish qo'llab-quvvataydi, SMTP ushbu faylni o'zgartirib konfiguratsiya qilish uchun skriptni tahrirlash orqali o'zingizning ma'lumotlarini qo'shishingiz mumkin.
 
-• Ishlashda ba'zi sozlamalar va yaxshilanishlar
+• Ishlashni tezlashtirish va qayta takomillashtirish
 
 # Xususiyatlari:
 
-• Proxychains dan foydalanib Shirinlik Rejimini qo'llab-quvvatlaydi, dastlabki mexanizmaga qarshi hujumlar uchun yanada ishonchli
+• Proxychains dan foydalanib, Stealth rejimini qo'llaydi, hujumlar uchun himoyalash mexanizmlari bilan ishlaydi
 
-• Wayback Machinedan avtomatik ravishda URL larni olib keladi
+• Wayback Machine dan avtomatik URL larni yuklaydi
 
-• URL larda mavjud bo'lgan parametrlar asosida URL larni filtrlaydi
+• URL dagi parametrlar asosida URL larni filtrlaydi
 
-• Faqat tirik URL larni filtrlash va har bir parametr uchun qiymatlarni tozalash uchun httpx dan foydalanadi
+• httpx qo'llanib, faqat faol URL larni filtrlaydi va har bir parametr uchun qiymatlarni tozalaydi
 
-• GitHub dan masofadan XSS payload ro'yxatini ishlatadi
+• Github dan masofadan XSS payload ro'yxatini qo'llaydi
 
-• Arxitekturaga qarab barcha kerakli talablarni o'rnatadi va yangi yangilanishlarni oladi (MacOS, Ubuntu, Debian, Kali bilan mos)
+• Arxitektura asosida zarur bo'lgan barcha modullarni o'rnatadi va yangi yangilashlarni qabul qiladi (MacOS, Ubuntu, Debian, Kali bilan uyumli)
 
-• URL larga payload ro'yxati bilan GET so'rovlarini yuboradi
+• URL lardan payload ro'yxati bilan GET so'rovlarini yuboradi
 
-• Mumkin bo'lgan XSS zaifliklarini aniqlaydi va hisobot qiladi
+• Mumkin bo'lgan XSS zaifligini aniqlaydi va hisobot qiladi
 
-• Natijalarni saqlash uchun domen nomi bilan papka yaratadi
+• Domain nomi bilan papka yaratadi va natijalarni saqlaydi
 
-• Mumkin bo'lgan ranjavur URL lar soni va Xulosa bilan yakuniy xabarni chop qiladi
+• Xulosa habar bilan topilgan mumkin bo'lgan ranjavur URL lar va xulosa raqamini chop qiladi
 
-• Natija URL larini faylda saqlaydi
+• Natija URL larni faylda saqlaydi
 
-• Hujumga qarshi xavfsizlik uchun tasodifiy Sun Tzu iqtibosini ko'rsatadi
+• Offensive security uchun tasodifiy Sun Tzu iqtibosini ko'rsatadi
 
-• Vositani ishlatishdan oldin foydalanuvchining Internetga ulanganligini tekshiradi
+• Aslida qo'llanish oldin Internet ulanishini tekshiradi
 
-• Payload larni URL larni qo'shishning usulini taqdim etadi
+• URL lardan payload qo'shish usulini ta'minlaydi
 
 • Payload bilan to'liq URL ni chiqaradi
 
-**Bu vosita, shuningdek, topilgan mumkin bo'lgan XSS injectionlar jami sonini, ranjavur URL lar, ishlatilgan payload va javob kodi ro'yxatini ko'rsatadigan xulosa xususiyatini ko'rsatadi, [...]
+**Bu vosita umumiy XSS injectionlarini topish soni, ta'sirlangan URL lar ro'yxati, foydalanilgan payload va javob kodi qo'llangan xulosa xususiyati ham ko'rsatadi.**
 
-Bu sizga xatoni ov paytida mukofot olishda yordam beradi:
+Bu sizga bug bounty olib chiqishga yordam beradi:
 
 ![giphy-3](https://user-images.githubusercontent.com/13942386/220473071-db3d1fa8-bec7-47ce-9b46-9a8a8ed123e9.gif)
 
 
 # Talablar:
 
-• waybackurls: Bu vositani go install github.com/tomnomnom/waybackurls@latest ni ishlatib o'rnata olasiz
+• waybackurls: Bu vositani `go install github.com/tomnomnom/waybackurls@latest` orqali o'rnatish mumkin
 
-• cURL: Bu vosita odatda Kali Linux va Ubuntu da o'rnatilgan, lekin Ubuntu da apt-get install curl yoki MacOS da brew install curl ni ishlatib o'rnatish mumkin
+• cURL: Bu vosita Kali Linux va Ubuntu da odatiy o'rnatilgan, lekin Ubuntu da `apt-get install curl` yoki MacOS da `brew install curl` orqali o'rnatilishi mumkin
 
-• figlet: Bu vositani Kali Linux yoki Ubuntu da apt-get install figlet ni ishlatip yoki MacOS da brew install figlet ni ishlatib o'rnata olasiz
+• figlet: Bu vositani Kali Linux yoki Ubuntu da `apt-get install figlet` yoki MacOS da `brew install figlet` orqali o'rnatish mumkin
 
-• lolcat: Bu vositani gem install lolcat ni ishlatib o'rnata olasiz
+• lolcat: Bu vositani `gem install lolcat` orqali o'rnatish mumkin
 
-• wget: Bu vosita odatda Kali Linux va Ubuntu da o'rnatilgan, lekin Ubuntu da apt-get install wget ni yoki MacOS da brew install wget ni ishlatib o'rnata olasiz
+• wget: Bu vosita Kali Linux va Ubuntu da odatiy o'rnatilgan, lekin Ubuntu da `apt-get install wget` yoki MacOS da `brew install wget` orqali o'rnatilishi mumkin
 
 # O'rnatish
 
@@ -88,38 +87,37 @@ chmod +x XSSRocket.sh
 
 # Skrinshot
 
-**Asosiy Menyusi**
+**Asosiy Menyu**
 
 ![Capture](https://github.com/user-attachments/assets/f4698248-e08c-4dac-95b3-26853154d898)
 
 
+# Uyumlilik:
 
-# Mos kelish: 
+Bu vosita Kali Linux, Ubuntu va MacOS da sinab o'tkazilgan.
 
-Bu vosita Kali Linux, Ubuntu va MacOS da sinov qilingan.
+# Payload Lug'ati:
 
-# Payload Wordlist:
-
-Payload ro'yxatini o'zgartirish uchun vositani tahrirlashingiz va boshqa URL ni o'rnatishingiz mumkin.
+Payload ro'yxatini o'zgartirish uchun vositani tahrirlab, boshqa URL ni o'rnatishingiz mumkin.
 
 
 # Inobat Qabul Qilish
 
-Bu vosita faqat o'quv va tadqiqot maqsadlari uchun taqdim qilinadi. Ushbu loyihaning muallifi bu vositaning hech qanday noto'g'ri qo'llanishi uchun mas'ul emas.
+Bu vosita faqat ta'lim va tadqiqot maqsadlari uchun taqdim etiladi. Bu loyihaning muallifi ushbu vositaning noto'g'ri ishlatilinishidan hech qanday javobgarlilik olmaydi.
 
-Biz uni NDA kelishuvlari bo'yicha va ularning klient tomonidan pentesting maqsadlari uchun roziligi bilan sinab ko'ramiz va biz hech qachon noto'g'ri qo'llashni rag'batlantirilmay va yoki yuz bergan zararni sudbatiga olamiz!
+Biz NDA shartnomalari va kliyentlarning roziligida pentesting maqsadlari uchun sinab o'tkazamiz va noto'g'ri ishlatilinishni taqosamiz yoki har qanday zarar uchun javobgarlik olmaimiz!
 
 <h2 align="center">
-  <a href="https://store.blackhatethicalhacking.com/" target="_blank">BHEH Rasmiy Merch Magazini</a>
+  <a href="https://store.blackhatethicalhacking.com/" target="_blank">BHEH Rasmiy Sovrin Do'koni</a>
 </h2>
 
 <p align="center">
-Hujumga qarshi xavfsizlik hamjamiyati uchun mo'ljallangan bizning Merch Magazini. Ommaviy va tajribali foydalanuvchilar uchun joyda yaxshi kiyim va ichimlik to'plamlari. Bizning tanlovimiz [...]
-Hacker uslubida yangi jihati bilan va xaker madaniyatiga sodiqlikni ko'rsating, shunday vosita bilan, bu dinamik va mustahkam siz kabilasiz. 😊
+Offensive Security jamiyati uchun mo'ljallangan Merch do'konimizga xush kelibsiz. Har bir professional va ishtirokchilarga qulay bo'lgan ko'ylak va ichish idishlari to'plamini ko'rib chiqing. Bizning tanlangan kolleksiyasida xaker madaniyatiga mos va dinamik hamda mustahkam sizning uslubingiz sifatida mavjud.
+
+Hacker uslubi bilan ishlang va "BHEH Rasmiy Merch" bilan xaker madaniyatiga sadoqat qilishingizni ko'rsating! 😊
 </p>
 
 <p align="center">
 
 <img src="https://github.com/blackhatethicalhacking/blackhatethicalhacking/blob/main/Merch_Promo.gif" width="540px" height="540">
   </p>
-````
