@@ -1,125 +1,125 @@
-# BHEH's XSSRocket
+````markdown
+# BHEH ning XSSRocket
 
 <p align="center">
 <a href="https://www.blackhatethicalhacking.com"><img src="https://www.blackhatethicalhacking.com/wp-content/uploads/2022/06/BHEH_logo.png" width="300px" alt="BHEH"></a>
 </p>
 
 <p align="center">
-XSS Rocket is written by Black Hat Ethical Hacking and is designed for Offensive Security and XSS (Cross-Site scripting) attacks. 
+XSS Rocket, Black Hat Ethical Hacking tomonidan yozilgan bo'lib, hujumga qarshi xavfsizlik va XSS (Sayt-ichasidagi skriptlar) hujumlari uchun mo'ljallangan.
 
-Shout out and thanks to <a href="https://github.com/shadowdevnotreal"> ShadowDevnotreal
+Rahmat va hurmat <a href="https://github.com/shadowdevnotreal"> ShadowDevnotreal ga
 
 </p>
 
-# Description
+# Tavsifi
 
-XSS Rocket, uses the **Wayback Machine** to fetch URLs and filters them based on parameters contained in the URLs. It then filters the URLs with **httpx** while using multiple **Grep** and **SED** patterns to filter only the ones that are alive and valid, removing the contents of the parameters and then uses a **remote XSS payload list from Github** to send **GET requests** with the payloads to the filtered URLs **injecting them with the XSS Payloads**, showcasing the status for **200 and 4XX errors** in Red and Green, and creating a **Summary for the findings**, while **saving all the results** into a folder that has the same name as the domain name created with all the results, inside it.
+XSS Rocket, **Wayback Machine** dan URL larni olib kelib, ularni URL da mavjud bo'lgan parametrlar asosida filtrlaydi. Keyin **httpx** bilan URL larni filtrlaydi, bir nechta **Grep** va **SED**dan foydalanib [...]
 
-It also includes a **feature** that generates a random **Sun Tzu quote for Offensive Security** and uses lolcat to display colorful outputs and ASCII art and a check system to ensure that the user is connected to the internet before running it. 
+Bundan tashqari, u **xususiyatni** o'z ichiga oladi, bu **Hujumga qarshi xavfsizlik uchun tasodifiy Sun Tzu iqtibosni** yaratadi va natijalarni ko'rsatish uchun lolcat va ASCII art dan foydalanadi va foydalanuvchini tekshirish tizimini ta'minlaydi [...]
 
-What is special about this tool is that technically, is the **methodology** used and **critical thinking** behind it for each step that it is doing its action, but also by changing the payload wordlist, you could do more injection based attacks. This means you can modify it, so it can check for SQL Injections, OS Command Injection and so on! - **If you do change it, send us a push notification so we can add it!** You also get to perform stealth scans by changing the IP before each attack to evade various mechanisms. 
+Bu vositani maxsus qiladigan narsа bu **metodologiya** va **tanqidiy fikrlash** hisoblanadi, chunki u har bir qadamda nima qilayotganini, lekin payloadvordni o'zgartirib, [...]
 
-# Latest Version & Updates:
+# So'nggi Versiya & Yangilanishlar:
 
-• V2 now supports sending the result by email to any email, you can use your own SMTP credentials in order to setup the configuration by editing the script and adding your details.
+• V2 endi natijalarni har qanday emailga yuborish imkonini beradi, siz konfiguratsiyani o'rnatish uchun o'zingizning SMTP ma'lumotlarini skriptni tahrirlash va ma'lumotlarni qo'shish orqali foydalanishingiz mumkin.
 
-• Some tweaks and enhancement in performance
+• Ishlashda ba'zi sozlamalar va yaxshilanishlar
 
-# Features:
+# Xususiyatlari:
 
-• Supports Stealth Mode using Proxychains, for more reliable attacks against defensive mechanisms
+• Proxychains dan foydalanib Shirinlik Rejimini qo'llab-quvvatlaydi, dastlabki mexanizmaga qarshi hujumlar uchun yanada ishonchli
 
-• Automatically fetches URLs from the Wayback Machine
+• Wayback Machinedan avtomatik ravishda URL larni olib keladi
 
-• Filters URLs based on parameters contained in the URLs
+• URL larda mavjud bo'lgan parametrlar asosida URL larni filtrlaydi
 
-• Uses httpx to filter only alive URLs and clearing the values for each parameter
+• Faqat tirik URL larni filtrlash va har bir parametr uchun qiymatlarni tozalash uchun httpx dan foydalanadi
 
-• Uses a remote XSS payload list from Github
+• GitHub dan masofadan XSS payload ro'yxatini ishlatadi
 
-• Installs all requirements needed depending on the architecture as it gets new updates (Compatible with MacOS, Ubuntu, Debian, Kali)
+• Arxitekturaga qarab barcha kerakli talablarni o'rnatadi va yangi yangilanishlarni oladi (MacOS, Ubuntu, Debian, Kali bilan mos)
 
-• Sends GET requests with payload list to URLs
+• URL larga payload ro'yxati bilan GET so'rovlarini yuboradi
 
-• Detects and reports possible XSS vulnerabilities
+• Mumkin bo'lgan XSS zaifliklarini aniqlaydi va hisobot qiladi
 
-• Creates a folder with the domain name to save results
+• Natijalarni saqlash uchun domen nomi bilan papka yaratadi
 
-• Prints final message with number of possible vulnerable URLs and a Summary
+• Mumkin bo'lgan ranjavur URL lar soni va Xulosa bilan yakuniy xabarni chop qiladi
 
-• Saves result URLs in a file
+• Natija URL larini faylda saqlaydi
 
-• Display a random Sun Tzu quote for offensive security
+• Hujumga qarshi xavfsizlik uchun tasodifiy Sun Tzu iqtibosini ko'rsatadi
 
-• Check if the user is connected to the internet before running the tool
+• Vositani ishlatishdan oldin foydalanuvchining Internetga ulanganligini tekshiradi
 
-• Provides a way to append payloads to the URLs
+• Payload larni URL larni qo'shishning usulini taqdim etadi
 
-• Output the full URL with payload
+• Payload bilan to'liq URL ni chiqaradi
 
-**This tool with also display a summary feature that displays the total number of possible XSS injections found, along with a list of affected URLs, the payload used, and the response code, at the end.**
-    
-It will, help you get the bounty of the bug while hunting:
-    
+**Bu vosita, shuningdek, topilgan mumkin bo'lgan XSS injectionlar jami sonini, ranjavur URL lar, ishlatilgan payload va javob kodi ro'yxatini ko'rsatadigan xulosa xususiyatini ko'rsatadi, [...]
+
+Bu sizga xatoni ov paytida mukofot olishda yordam beradi:
+
 ![giphy-3](https://user-images.githubusercontent.com/13942386/220473071-db3d1fa8-bec7-47ce-9b46-9a8a8ed123e9.gif)
 
 
-# Requirements:
+# Talablar:
 
-• waybackurls: This tool can be installed by running go install github.com/tomnomnom/waybackurls@latest
+• waybackurls: Bu vositani go install github.com/tomnomnom/waybackurls@latest ni ishlatib o'rnata olasiz
 
-• cURL: This tool is commonly pre-installed on Kali Linux and Ubuntu, but can be installed by running apt-get install curl on Ubuntu or brew install curl on MacOS
+• cURL: Bu vosita odatda Kali Linux va Ubuntu da o'rnatilgan, lekin Ubuntu da apt-get install curl yoki MacOS da brew install curl ni ishlatib o'rnatish mumkin
 
-• figlet: This tool can be installed by running apt-get install figlet on Kali Linux or Ubuntu or brew install figlet on MacOS
+• figlet: Bu vositani Kali Linux yoki Ubuntu da apt-get install figlet ni ishlatip yoki MacOS da brew install figlet ni ishlatib o'rnata olasiz
 
-• lolcat: This tool can be installed by running gem install lolcat
+• lolcat: Bu vositani gem install lolcat ni ishlatib o'rnata olasiz
 
-• wget: This tool is commonly pre-installed on Kali Linux and Ubuntu, but can be installed by running apt-get install wget on Ubuntu or brew install wget on MacOS
+• wget: Bu vosita odatda Kali Linux va Ubuntu da o'rnatilgan, lekin Ubuntu da apt-get install wget ni yoki MacOS da brew install wget ni ishlatib o'rnata olasiz
 
-# Installation
+# O'rnatish
 
-`git clone https://github.com/blackhatethicalhacking/XSSRocket.git`
+```bash
+git clone https://github.com/blackhatethicalhacking/XSSRocket.git
+cd XSSRocket
+chmod +x XSSRocket.sh
+./XSSRocket.sh
+```
 
-`cd XSSRocket`
+# Skrinshot
 
-`chmod +x XSSRocket.sh`
-
-`./XSSRocket.sh`
-
-# Screenshot
-
-**Main Menu**
-
-
+**Asosiy Menyusi**
 
 ![Capture](https://github.com/user-attachments/assets/f4698248-e08c-4dac-95b3-26853154d898)
 
 
 
-# Compatibility: 
+# Mos kelish: 
 
-This tool has been tested on Kali Linux, Ubuntu and MacOS.
+Bu vosita Kali Linux, Ubuntu va MacOS da sinov qilingan.
 
 # Payload Wordlist:
 
-To change the list of payloads, you can edit the tool and set another URL.
+Payload ro'yxatini o'zgartirish uchun vositani tahrirlashingiz va boshqa URL ni o'rnatishingiz mumkin.
 
 
-# Disclaimer
+# Inobat Qabul Qilish
 
-This tool is provided for educational and research purpose only. The author of this project are no way responsible for any misuse of this tool. 
-We use it to test under NDA agreements with clients and their consents for pentesting purposes and we never encourage to misuse or take responsibility for any damage caused !
+Bu vosita faqat o'quv va tadqiqot maqsadlari uchun taqdim qilinadi. Ushbu loyihaning muallifi bu vositaning hech qanday noto'g'ri qo'llanishi uchun mas'ul emas.
+
+Biz uni NDA kelishuvlari bo'yicha va ularning klient tomonidan pentesting maqsadlari uchun roziligi bilan sinab ko'ramiz va biz hech qachon noto'g'ri qo'llashni rag'batlantirilmay va yoki yuz bergan zararni sudbatiga olamiz!
 
 <h2 align="center">
-  <a href="https://store.blackhatethicalhacking.com/" target="_blank">BHEH Official Merch</a>
+  <a href="https://store.blackhatethicalhacking.com/" target="_blank">BHEH Rasmiy Merch Magazini</a>
 </h2>
 
 <p align="center">
-Introducing our Merch Store, designed for the Offensive Security community. Explore a curated collection of apparel and drinkware, perfect for both professionals and enthusiasts. Our selection includes premium t-shirts, hoodies, and mugs, each featuring bold hacking-themed slogans and graphics that embody the spirit of red teaming and offensive security. 
-Hack with style and showcase your dedication to hacker culture with gear that’s as dynamic and resilient as you are. 😊
+Hujumga qarshi xavfsizlik hamjamiyati uchun mo'ljallangan bizning Merch Magazini. Ommaviy va tajribali foydalanuvchilar uchun joyda yaxshi kiyim va ichimlik to'plamlari. Bizning tanlovimiz [...]
+Hacker uslubida yangi jihati bilan va xaker madaniyatiga sodiqlikni ko'rsating, shunday vosita bilan, bu dinamik va mustahkam siz kabilasiz. 😊
 </p>
 
 <p align="center">
 
 <img src="https://github.com/blackhatethicalhacking/blackhatethicalhacking/blob/main/Merch_Promo.gif" width="540px" height="540">
   </p>
+````
