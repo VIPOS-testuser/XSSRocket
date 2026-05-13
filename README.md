@@ -79,7 +79,7 @@ Bu sizga bug bounty olib chiqishga yordam beradi:
 # O'rnatish
 
 ```bash
-https://github.com/VIPOS-testuser/XSSRocket.git
+git clone https://github.com/VIPOS-testuser/XSSRocket.git
 cd XSSRocket
 chmod +x XSSRocket.sh
 ./XSSRocket.sh
